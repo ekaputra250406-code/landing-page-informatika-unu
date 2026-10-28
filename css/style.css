@@ -1,0 +1,20 @@
+/* css/style.css — kustom minor, jangan berlebihan */
+
+/* Scroll behavior halus untuk anchor link */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Pastikan teks tidak mepet tepi di perangkat kecil saat keyboard muncul */
+body {
+  text-rendering: optimizeLegibility;
+}
+
+/* Fokus keyboard yang jelas (aksesibilitas) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}

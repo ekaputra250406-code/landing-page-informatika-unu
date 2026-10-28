@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informatika UNU Yogyakarta — Profil Program Studi</title>
+  <meta name="description" content="Landing page Profil Program Studi Informatika UNU Yogyakarta." />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Konfigurasi breakpoint custom sesuai SRS: sm 576 / md 768 / lg 992 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            sm: '576px',
+            md: '768px',
+            lg: '992px',
+          },
+          colors: {
+            brand: {
+              DEFAULT: '#0f766e', // teal-700
+              dark: '#115e59',
+              light: '#5eead4',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- CSS kustom minor -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm border-b border-slate-100">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      
+      <!-- Logo & Teks -->
+      <a href="#beranda" class="flex items-center gap-3">
+        <img src="img/logo-unu.jpg" alt="Logo UNU Yogyakarta" class="h-10 w-auto" />
+        <span class="text-xl font-bold text-brand leading-tight">
+          Informatika UNU
+        </span>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button
+        id="menu-toggle"
+        type="button"
+        class="lg:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand"
+        aria-controls="nav-menu"
+        aria-expanded="false"
+        aria-label="Buka menu navigasi"
+      >
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Menu desktop & container mobile -->
+      <ul
+        id="nav-menu"
+        class="hidden absolute top-full left-0 w-full bg-white border-b border-slate-100 shadow-md px-4 py-3 space-y-2
+               lg:static lg:flex lg:w-auto lg:space-y-0 lg:space-x-6 lg:shadow-none lg:px-0 lg:py-0 lg:border-none"
+      >
+        <li><a href="#beranda"     class="block py-1 font-medium hover:text-brand transition">Beranda</a></li>
+        <li><a href="#tentang"     class="block py-1 font-medium hover:text-brand transition">Tentang</a></li>
+        <li><a href="#keunggulan"  class="block py-1 font-medium hover:text-brand transition">Keunggulan</a></li>
+        <li><a href="#kontak"      class="block py-1 font-medium hover:text-brand transition">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="beranda" class="scroll-mt-20 bg-gradient-to-b from-brand/10 to-white">
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 leading-tight">
+          Selamat Datang di <br class="hidden md:block"/>
+          <span class="text-brand">Informatika UNU Yogyakarta</span>
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+          Program studi yang membekali mahasiswa dengan kompetensi rekayasa perangkat lunak,
+          data, dan teknologi terkini untuk menjawab tantangan industri digital.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#keunggulan"
+             class="px-8 py-3 rounded-lg bg-brand text-white font-semibold shadow-md hover:bg-brand-dark hover:shadow-lg transition duration-300">
+            Pelajari Keunggulan
+          </a>
+          <a href="#kontak"
+             class="px-8 py-3 rounded-lg border-2 border-brand text-brand font-semibold hover:bg-brand hover:text-white transition duration-300">
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TENTANG ================= -->
+    <section id="tentang" class="scroll-mt-20">
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900">Tentang Program Studi</h2>
+        
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <!-- Kiri: Teks -->
+          <div>
+            <p class="text-slate-600 mb-4 leading-relaxed text-justify">
+              Program Studi Informatika Universitas Nahdlatul Ulama (UNU) Yogyakarta hadir untuk mencetak generasi unggul di bidang teknologi informasi yang berlandaskan nilai-nilai keislaman dan kebangsaan.
+            </p>
+            <p class="text-slate-600 leading-relaxed text-justify">
+              Kami memadukan penguasaan teori ilmu komputer yang kuat dengan praktik rekayasa perangkat lunak yang relevan dengan kebutuhan industri digital saat ini, mempersiapkan mahasiswa menjadi talenta IT yang siap bersaing secara global.
+            </p>
+          </div>
+          <!-- Kanan: Kotak Visi -->
+          <div class="bg-brand/5 border border-brand/20 rounded-2xl p-8 text-center shadow-sm">
+             <h3 class="text-xl font-bold text-brand-dark mb-4">Visi Kami</h3>
+             <p class="text-slate-700 italic leading-relaxed">
+               "Menjadi program studi Informatika yang unggul, inovatif, dan berdaya saing global dalam pengembangan teknologi informasi pada tahun 2030."
+             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KEUNGGULAN ================= -->
+    <section id="keunggulan" class="scroll-mt-20 bg-slate-50 border-y border-slate-100">
+      <div class="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900">Keunggulan Kami</h2>
+        <p class="mt-4 text-center text-slate-600 max-w-2xl mx-auto">
+          Berbagai fasilitas dan kurikulum dirancang khusus untuk mendukung kesuksesan mahasiswa selama masa studi dan karier.
+        </p>
+
+        <!-- Grid: 1 kolom mobile, 2 kolom tablet (md), 3 kolom desktop (lg) -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <article class="bg-white rounded-xl shadow-sm p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Kurikulum Terkini</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Materi disesuaikan dengan tren industri digital terkini, mulai dari Web Development, Mobile App, Data Science, hingga Kecerdasan Buatan (AI).
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="bg-white rounded-xl shadow-sm p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Prospek Karir Luas</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Lulusan dibekali keahlian praktis untuk berkarir sebagai Software Engineer, Web Developer, Data Analyst, maupun IT Consultant di berbagai perusahaan.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="bg-white rounded-xl shadow-sm p-8 border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+            <div class="w-14 h-14 bg-brand/10 rounded-xl flex items-center justify-center text-brand mb-6">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Fasilitas Memadai</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Laboratorium komputer modern, akses internet berkecepatan tinggi, serta lingkungan belajar yang nyaman untuk mendukung praktikum mahasiswa.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAK ================= -->
+    <section id="kontak" class="scroll-mt-20">
+      <div class="max-w-3xl mx-auto px-4 py-16 md:py-24 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Hubungi Kami</h2>
+        <p class="mt-3 text-slate-600 mb-10">Sampaikan pertanyaan atau masukan Anda melalui kontak di bawah ini.</p>
+
+        <!-- Kontak Langsung (WA & Email) -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/6281374523231" target="_blank" rel="noopener noreferrer" 
+             class="flex items-center justify-center gap-2 px-8 py-4 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-green-500 hover:text-green-600 transition text-slate-700 font-medium text-lg">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            0813-7452-3231
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:unu-jogja@gmail.com" 
+             class="flex items-center justify-center gap-2 px-8 py-4 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md hover:border-brand hover:text-brand transition text-slate-700 font-medium text-lg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            unu-jogja@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-900 text-slate-400 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between text-sm gap-4">
+      <p>&copy; <span id="year"></span> Program Studi Informatika UNU Yogyakarta.</p>
+      <p>Dibuat untuk Tugas Praktikum Pemrograman Web.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
